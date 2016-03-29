@@ -8,7 +8,7 @@ use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints as Assert;
 
 /**
- * @ORM\Entity
+ * @ORM\Entity(repositoryClass="UserRepository")
  * @ORM\Table(name="fos_user")
  */
 class User extends BaseUser
@@ -22,17 +22,38 @@ class User extends BaseUser
 
     /**
      * @ORM\Column(type="string", length=255)
-     *
-     * @Assert\NotBlank(message="Please enter your name.", groups={"Registration", "Profile"})
-     * @Assert\Length(
-     *     min=3,
-     *     max=255,
-     *     minMessage="The name is too short.",
-     *     maxMessage="The name is too long.",
-     *     groups={"Registration", "Profile"}
-     * )
      */
-    protected $name;
+    protected $firstName;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    protected $lastName;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    protected $address;
+
+    /**
+     * @ORM\Column(type="string", length=12)
+     */
+    protected $phone;
+
+    /**
+     * @ORM\Column(type="integer")
+     */
+    protected $age;
+
+    /**
+     * @ORM\Column(type="string", length=3)
+     */
+    protected $bloodType;
+
+    /**
+     * @ORM\Column(type="string", length=3)
+     */
+    protected $rhFactor;
 
     public function __construct()
     {
@@ -41,14 +62,115 @@ class User extends BaseUser
         $this->roles = array('ROLE_USER');
     }
 
-    public function getName() {
-        return $this->name;
+    /**
+     * @return mixed
+     */
+    public function getLastName()
+    {
+        return $this->lastName;
     }
 
-    public function setName($name)
+    /**
+     * @param mixed $lastName
+     */
+    public function setLastName($lastName)
     {
-        $this->name = $name;
+        $this->lastName = $lastName;
+    }
 
-        return $this;
+    /**
+     * @return mixed
+     */
+    public function getAddress()
+    {
+        return $this->address;
+    }
+
+    /**
+     * @param mixed $address
+     */
+    public function setAddress($address)
+    {
+        $this->address = $address;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getFirstName()
+    {
+        return $this->firstName;
+    }
+
+    /**
+     * @param mixed $firstName
+     */
+    public function setFirstName($firstName)
+    {
+        $this->firstName = $firstName;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getPhone()
+    {
+        return $this->phone;
+    }
+
+    /**
+     * @param mixed $phone
+     */
+    public function setPhone($phone)
+    {
+        $this->phone = $phone;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getAge()
+    {
+        return $this->age;
+    }
+
+    /**
+     * @param mixed $age
+     */
+    public function setAge($age)
+    {
+        $this->age = $age;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getBloodType()
+    {
+        return $this->bloodType;
+    }
+
+    /**
+     * @param mixed $bloodType
+     */
+    public function setBloodType($bloodType)
+    {
+        $this->bloodType = $bloodType;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getRhFactor()
+    {
+        return $this->rhFactor;
+    }
+
+    /**
+     * @param mixed $rhFactor
+     */
+    public function setRhFactor($rhFactor)
+    {
+        $this->rhFactor = $rhFactor;
     }
 }
