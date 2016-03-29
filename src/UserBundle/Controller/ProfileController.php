@@ -19,14 +19,12 @@ class ProfileController extends Controller
     public function showAction()
     {
         $user = $this->getUser();
-        $name = $this->getName();
         if (!is_object($user) || !$user instanceof UserInterface) {
             throw new AccessDeniedException('This user does not have access to this section.');
         }
 
         return $this->render('UserBundle:Profile:show.html.twig', array(
-            'user' => $user,
-            'name' => $name
+            'user' => $user
         ));
     }
 }
