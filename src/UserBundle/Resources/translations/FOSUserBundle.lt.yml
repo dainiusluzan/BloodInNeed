@@ -19,6 +19,7 @@ profile:
     show:
         username: 'Naudotojo vardas'
         email: 'El. paštas'
+        name: 'Vardas'
     edit:
         submit: Atnaujinti
     flash:
