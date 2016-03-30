@@ -2,28 +2,34 @@
 <html>
 <head>
     <meta charset="UTF-8" />
-    <title>{% block title %}{{ "My project" }}{% endblock %}</title>
+    <title>{% block title %}{{ "BloodInNeed" }}{% endblock %}</title>
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="{{ asset('images/favicon.ico')}}">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    {#<link rel="icon" type="image/x-icon" href="{{ asset('images/favicon.ico')}}">#}
     {% block stylesheets %}
-        {#<link rel="stylesheet" href="{{ asset('css/style.css') }}"/>#}
+        <link rel="stylesheet" href="{{ asset('bundles/framework/css/bootstrap.min.css') }}"/>
     {% endblock %}
     {% block canonical_meta %}{% endblock %}
 </head>
-<body>
-<div class="container">
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+
     {% block container %}
         {% block header %}
             {% include "::inc/header.html.twig" %}
         {% endblock %}
         {% block body %}{% endblock %}
     {% endblock %}
-</div>
+
 {% block footer %}
 {% include "::inc/footer.html.twig" %}
 {% endblock %}
 {% block javascripts %}
-    {#<script src="{{ asset('js/script.js') }}"></script>#}
+    <script src="{{ asset('bundles/framework/js/jquery.js') }}"></script>
+
+    <script src="{{ asset('bundles/framework/js/bootstrap.min.js') }}"></script>
+
+    <script src="{{ asset('bundles/framework/js/jquery.easing.min.js') }}"></script>
 {% endblock %}
 </body>
 </html>
