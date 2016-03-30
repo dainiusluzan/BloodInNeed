@@ -21,7 +21,7 @@ profile:
         email: 'El. paštas'
         firstName: Vardas
         lastName: Pavardė
-        address: Adresas
+        town: Miestas
         phone: 'Telefono numeris'
         age: Amžius
         bloodType: 'Kraujo grupė'

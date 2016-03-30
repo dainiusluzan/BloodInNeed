@@ -31,9 +31,9 @@ class User extends BaseUser
     protected $lastName;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="integer")
      */
-    protected $address;
+    protected $town;
 
     /**
      * @ORM\Column(type="string", length=12)
@@ -81,17 +81,17 @@ class User extends BaseUser
     /**
      * @return mixed
      */
-    public function getAddress()
+    public function getTown()
     {
-        return $this->address;
+        return $this->town;
     }
 
     /**
      * @param mixed $address
      */
-    public function setAddress($address)
+    public function setTown($town)
     {
-        $this->address = $address;
+        $this->town = $town;
     }
 
     /**

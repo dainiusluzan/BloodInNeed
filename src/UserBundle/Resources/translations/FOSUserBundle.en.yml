@@ -23,7 +23,7 @@ profile:
         email: Email
         firstName: 'First name'
         lastName: 'Last name'
-        address: Address
+        town: Town
         phone: 'Phone number'
         age: Age
         bloodType: 'Blood type'

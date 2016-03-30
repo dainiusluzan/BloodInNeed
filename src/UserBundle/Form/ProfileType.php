@@ -14,7 +14,7 @@ class ProfileType extends AbstractType
         $builder
             ->add('firstName')
             ->add('lastName')
-            ->add('address')
+            ->add('town')
             ->add('phone')
             ->add('age')
             ->add('bloodType',ChoiceType::class, array(
