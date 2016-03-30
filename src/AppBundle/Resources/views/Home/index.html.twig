@@ -2,25 +2,96 @@
 
 {% block title %}Homepage - {{ parent() }}{% endblock %}
 
-{% block stylesheets %}
-    <link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet" type="text/css">
-    {{ parent() }}
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            font-weight: 100;
-            font-family: 'Lato';
-        }
 
-        .title {
-            margin: 20px auto;
-            text-align: center;
-            font-size: 96px;
-        }
-    </style>
+{% block stylesheets %}
+   {# <link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet" type="text/css">#}
+    {{ parent() }}
+    <link href="{{ asset('bundles/framework/css/scrolling-nav.css') }}" rel="stylesheet" type="text/css">
+
 {% endblock %}
 
 {% block body %}
-    <div class="title">NFQ Akademija</div>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand page-scroll" href="#page-top">Start Bootstrap</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                    <li class="hidden">
+                        <a class="page-scroll" href="#page-top"></a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#page-top">Registracija</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#apie">Apie mus</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#kontaktai">Kontaktai</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Intro Section -->
+    <section id="intro" class="intro-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1>Blood in Need</h1>
+                    <div class="col-lg-4 col-lg-offset-2">
+                        <button type="button" class="btn btn-default btn-block btn-lg" href="#">Prisijungti</button>
+                    </div>
+                    <div class="col-lg-4 ">
+                        <button type="button" class="btn btn-default btn-block btn-lg" href="#">Registruotis</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="apie"  class="about-section">
+        <div class="container" >
+            <div class="row" >
+                <div class="col-lg-12">
+                    <h1>About Section</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="kontaktai" class="contact-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1>Contact Section</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% endblock %}
+
+{% block javascripts %}
+    {{  parent() }}
+    <script src="{{ asset('bundles/framework/js/scrolling-nav.js') }}"></script>
+
 {% endblock %}
