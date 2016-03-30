@@ -25,6 +25,7 @@ class Town
      * @var string
      *
      * @ORM\Column(name="town", type="string", length=255)
+     * @ORM\OneToMany(targetEntity="User", mappedBy="towns")
      */
     private $town;
 
@@ -68,4 +69,3 @@ class Town
         return $this->id.'';
     }
 }
-
