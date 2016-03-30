@@ -5,6 +5,7 @@ namespace UserBundle\Form;
 
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
+use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 
 class ProfileType extends AbstractType
 {
@@ -16,8 +17,24 @@ class ProfileType extends AbstractType
             ->add('address')
             ->add('phone')
             ->add('age')
-            ->add('bloodType')
-            ->add('rhFactor')
+            ->add('bloodType',ChoiceType::class, array(
+                'choices' => array(
+                    '' => '',
+                    'a-' => 'A-',
+                    'a+' => 'A+',
+                    'b-' => 'B-',
+                    'b+' => 'B+',
+                    'ab+' => 'AB+',
+                    'ab-' => 'AB-',
+                    'o+' => 'O+',
+                    'o-' => 'O-',
+                )))
+            ->add('rhFactor', ChoiceType::class, array(
+                'choices' => array(
+                    '' => '',
+                    'rh+' => 'Rh+',
+                    'rh-' => 'Rh-',
+                )))
         ;
     }
 
