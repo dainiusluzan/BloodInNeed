@@ -19,7 +19,13 @@ profile:
     show:
         username: 'Naudotojo vardas'
         email: 'El. paštas'
-        name: 'Vardas'
+        firstName: Vardas
+        lastName: Pavardė
+        address: Adresas
+        phone: 'Telefono numeris'
+        age: Amžius
+        bloodType: 'Kraujo grupė'
+        rhFactor: 'Rezus faktorius'
     edit:
         submit: Atnaujinti
     flash:

@@ -21,7 +21,13 @@ profile:
     show:
         username: Username
         email: Email
-        name: Name
+        firstName: 'First name'
+        lastName: 'Last name'
+        address: Address
+        phone: 'Phone number'
+        age: Age
+        bloodType: 'Blood type'
+        rhFactor: 'Rh factor'
     edit:
         submit: Update
     flash:
