@@ -72,3 +72,10 @@ form:
     password_confirmation: 'Pakartoti slaptažodį'
     new_password: 'Naujas slaptažodis'
     new_password_confirmation: 'Naujas slaptažodis (pakartoti)'
+    firstName: Vardas
+    lastName: Pavardė
+    town: Miestas
+    phone: 'Telefono numeris'
+    age: Amžius
+    bloodType: 'Kraujo grupė'
+    rhFactor: 'Rezus faktorius'

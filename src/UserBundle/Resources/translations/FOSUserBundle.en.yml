@@ -92,3 +92,10 @@ form:
     password_confirmation: 'Repeat password'
     new_password: 'New password'
     new_password_confirmation: 'Repeat new password'
+    firstName: 'First name'
+    lastName: 'Last name'
+    town: Town
+    phone: 'Phone number'
+    age: Age
+    bloodType: 'Blood type'
+    rhFactor: 'Rh factor'
