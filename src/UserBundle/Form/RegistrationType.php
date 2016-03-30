@@ -18,8 +18,9 @@ class RegistrationType extends AbstractType
             ->add('phone')
             ->add('age')
             ->add('bloodType',ChoiceType::class, array(
-                'choices' => array(
-                    '' => '',
+                'choices_as_values' => true,
+                'choices' => [
+                    '' => null,
                     'a-' => 'A-',
                     'a+' => 'A+',
                     'b-' => 'B-',
@@ -28,13 +29,14 @@ class RegistrationType extends AbstractType
                     'ab-' => 'AB-',
                     'o+' => 'O+',
                     'o-' => 'O-',
-                )))
+                ]))
             ->add('rhFactor', ChoiceType::class, array(
-                'choices' => array(
-                    '' => '',
+                'choices_as_values' => true,
+                'choices' => [
+                    '' => null,
                     'rh+' => 'Rh+',
                     'rh-' => 'Rh-',
-                )))
+                ]))
         ;
     }
 

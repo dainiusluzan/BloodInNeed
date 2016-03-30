@@ -18,7 +18,8 @@ class ProfileType extends AbstractType
             ->add('phone')
             ->add('age')
             ->add('bloodType',ChoiceType::class, array(
-                'choices' => array(
+                'choices_as_values' => true,
+                'choices' => [
                     '' => '',
                     'a-' => 'A-',
                     'a+' => 'A+',
@@ -28,13 +29,14 @@ class ProfileType extends AbstractType
                     'ab-' => 'AB-',
                     'o+' => 'O+',
                     'o-' => 'O-',
-                )))
+                ]))
             ->add('rhFactor', ChoiceType::class, array(
-                'choices' => array(
+                'choices_as_values' => true,
+                'choices' => [
                     '' => '',
                     'rh+' => 'Rh+',
                     'rh-' => 'Rh-',
-                )))
+                ]))
         ;
     }
 
