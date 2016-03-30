@@ -32,6 +32,8 @@ class User extends BaseUser
 
     /**
      * @ORM\Column(type="integer")
+     * @ORM\ManyToOne(targetEntity="Town", inversedBy="towns")
+     * @ORM\JoinColumn(name="town", referencedColumnName="id")
      */
     protected $town;
 

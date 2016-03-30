@@ -6,6 +6,7 @@ namespace UserBundle\Form;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
+use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 
 class ProfileType extends AbstractType
 {
@@ -14,7 +15,12 @@ class ProfileType extends AbstractType
         $builder
             ->add('firstName', null, array('label' => 'form.firstName', 'translation_domain' => 'FOSUserBundle'))
             ->add('lastName', null, array('label' => 'form.lastName', 'translation_domain' => 'FOSUserBundle'))
-            ->add('town', null, array('label' => 'form.town', 'translation_domain' => 'FOSUserBundle'))
+            ->add('town', EntityType::class, array(
+                'class' => 'UserBundle:Town',
+                'choice_label' => 'town',
+                'label' => 'form.town',
+                'translation_domain' => 'FOSUserBundle'
+            ))
             ->add('phone', null, array('label' => 'form.phone', 'translation_domain' => 'FOSUserBundle'))
             ->add('age', null, array('label' => 'form.age', 'translation_domain' => 'FOSUserBundle'))
             ->add('bloodType',ChoiceType::class, array(
