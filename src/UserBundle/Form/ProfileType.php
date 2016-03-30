@@ -21,21 +21,21 @@ class ProfileType extends AbstractType
                 'choices_as_values' => true,
                 'choices' => [
                     '' => '',
-                    'a-' => 'A-',
-                    'a+' => 'A+',
-                    'b-' => 'B-',
-                    'b+' => 'B+',
-                    'ab+' => 'AB+',
-                    'ab-' => 'AB-',
-                    'o+' => 'O+',
-                    'o-' => 'O-',
+                    'A-' => 'a-',
+                    'A+' => 'a+',
+                    'B-' => 'b-',
+                    'B+' => 'b+',
+                    'AB+' => 'ab+',
+                    'AB-' => 'ab-',
+                    'O+' => 'o+',
+                    'O-' => 'o-',
                 ]))
             ->add('rhFactor', ChoiceType::class, array(
                 'choices_as_values' => true,
                 'choices' => [
                     '' => '',
-                    'rh+' => 'Rh+',
-                    'rh-' => 'Rh-',
+                    'Rh+' => 'rh+',
+                    'Rh-' => 'rh-',
                 ]))
         ;
     }

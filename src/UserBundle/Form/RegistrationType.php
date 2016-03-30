@@ -20,22 +20,22 @@ class RegistrationType extends AbstractType
             ->add('bloodType',ChoiceType::class, array(
                 'choices_as_values' => true,
                 'choices' => [
-                    '' => null,
-                    'a-' => 'A-',
-                    'a+' => 'A+',
-                    'b-' => 'B-',
-                    'b+' => 'B+',
-                    'ab+' => 'AB+',
-                    'ab-' => 'AB-',
-                    'o+' => 'O+',
-                    'o-' => 'O-',
+                    '' => '',
+                    'A-' => 'a-',
+                    'A+' => 'a+',
+                    'B-' => 'b-',
+                    'B+' => 'b+',
+                    'AB+' => 'ab+',
+                    'AB-' => 'ab-',
+                    'O+' => 'o+',
+                    'O-' => 'o-',
                 ]))
             ->add('rhFactor', ChoiceType::class, array(
                 'choices_as_values' => true,
                 'choices' => [
-                    '' => null,
-                    'rh+' => 'Rh+',
-                    'rh-' => 'Rh-',
+                    '' => '',
+                    'Rh+' => 'rh+',
+                    'Rh-' => 'rh-',
                 ]))
         ;
     }
