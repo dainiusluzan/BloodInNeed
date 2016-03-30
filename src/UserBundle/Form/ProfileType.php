@@ -12,15 +12,17 @@ class ProfileType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('firstName')
-            ->add('lastName')
-            ->add('town')
-            ->add('phone')
-            ->add('age')
+            ->add('firstName', null, array('label' => 'form.firstName', 'translation_domain' => 'FOSUserBundle'))
+            ->add('lastName', null, array('label' => 'form.lastName', 'translation_domain' => 'FOSUserBundle'))
+            ->add('town', null, array('label' => 'form.town', 'translation_domain' => 'FOSUserBundle'))
+            ->add('phone', null, array('label' => 'form.phone', 'translation_domain' => 'FOSUserBundle'))
+            ->add('age', null, array('label' => 'form.age', 'translation_domain' => 'FOSUserBundle'))
             ->add('bloodType',ChoiceType::class, array(
                 'choices_as_values' => true,
+                'label' => 'form.bloodType',
+                'translation_domain' => 'FOSUserBundle',
+                'placeholder' => '',
                 'choices' => [
-                    '' => '',
                     'A-' => 'a-',
                     'A+' => 'a+',
                     'B-' => 'b-',
@@ -32,8 +34,10 @@ class ProfileType extends AbstractType
                 ]))
             ->add('rhFactor', ChoiceType::class, array(
                 'choices_as_values' => true,
+                'label' => 'form.rhFactor',
+                'translation_domain' => 'FOSUserBundle',
+                'placeholder' => '',
                 'choices' => [
-                    '' => '',
                     'Rh+' => 'rh+',
                     'Rh-' => 'rh-',
                 ]))

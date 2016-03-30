@@ -21,8 +21,8 @@ class RegistrationType extends AbstractType
                 'choices_as_values' => true,
                 'label' => 'form.bloodType',
                 'translation_domain' => 'FOSUserBundle',
+                'placeholder' => '',
                 'choices' => [
-                    '' => '',
                     'A-' => 'a-',
                     'A+' => 'a+',
                     'B-' => 'b-',
@@ -36,8 +36,8 @@ class RegistrationType extends AbstractType
                 'choices_as_values' => true,
                 'label' => 'form.rhFactor',
                 'translation_domain' => 'FOSUserBundle',
+                'placeholder' => '',
                 'choices' => [
-                    '' => '',
                     'Rh+' => 'rh+',
                     'Rh-' => 'rh-',
                 ]))
