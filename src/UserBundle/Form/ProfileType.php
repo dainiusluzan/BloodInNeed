@@ -29,23 +29,14 @@ class ProfileType extends AbstractType
                 'translation_domain' => 'FOSUserBundle',
                 'placeholder' => '',
                 'choices' => [
-                    'A-' => 'a-',
-                    'A+' => 'a+',
-                    'B-' => 'b-',
-                    'B+' => 'b+',
-                    'AB+' => 'ab+',
-                    'AB-' => 'ab-',
-                    'O+' => 'o+',
-                    'O-' => 'o-',
-                ]))
-            ->add('rhFactor', ChoiceType::class, array(
-                'choices_as_values' => true,
-                'label' => 'form.rhFactor',
-                'translation_domain' => 'FOSUserBundle',
-                'placeholder' => '',
-                'choices' => [
-                    'Rh+' => 'rh+',
-                    'Rh-' => 'rh-',
+                    'A-' => 'A-',
+                    'A+' => 'A+',
+                    'B-' => 'B-',
+                    'B+' => 'B+',
+                    'AB+' => 'AB+',
+                    'AB-' => 'AB-',
+                    'O+' => 'O+',
+                    'O-' => 'O-',
                 ]))
         ;
     }

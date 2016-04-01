@@ -51,11 +51,6 @@ class User extends BaseUser
      */
     protected $bloodType;
 
-    /**
-     * @ORM\Column(type="string", length=3)
-     */
-    protected $rhFactor;
-
     public function __construct()
     {
         parent::__construct();
@@ -157,21 +152,5 @@ class User extends BaseUser
     public function setBloodType($bloodType)
     {
         $this->bloodType = $bloodType;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getRhFactor()
-    {
-        return $this->rhFactor;
-    }
-
-    /**
-     * @param mixed $rhFactor
-     */
-    public function setRhFactor($rhFactor)
-    {
-        $this->rhFactor = $rhFactor;
     }
 }
