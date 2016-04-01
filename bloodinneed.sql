@@ -46,11 +46,11 @@ CREATE TABLE `fos_user` (
   `age` int(11) NOT NULL,
   `blood_type` varchar(3) COLLATE utf8_unicode_ci NOT NULL,
   `rh_factor` varchar(3) COLLATE utf8_unicode_ci NOT NULL,
-  `town` int(11) NOT NULL,
+  `town` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `UNIQ_957A647992FC23A8` (`username_canonical`),
   UNIQUE KEY `UNIQ_957A6479A0D96FBF` (`email_canonical`)
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -59,8 +59,32 @@ CREATE TABLE `fos_user` (
 
 LOCK TABLES `fos_user` WRITE;
 /*!40000 ALTER TABLE `fos_user` DISABLE KEYS */;
-INSERT INTO `fos_user` VALUES (1,'test','test','test@test.com','test@test.com',1,'humsm9zi5qo880wcw0cg40okwo40ocg','$2y$13$humsm9zi5qo880wcw0cg4uvnBCinioNTDXKLjzLWsoq06eoJ/c.fW','2016-03-30 13:20:08',0,0,NULL,NULL,NULL,'a:1:{i:0;s:9:\"ROLE_USER\";}',0,NULL,'Testas','Testinis','+37065214521',18,'A+','Rh+',0),(4,'admin_test','admin_test','admin@test.com','admin@test.com',1,'6p6prfj1h1c0wggk4wsw0g04woggcos','$2y$13$6p6prfj1h1c0wggk4wsw0e3cQk03evCAu12ebCMCRUaou5Z8UF9BO',NULL,0,0,NULL,NULL,NULL,'a:2:{i:0;s:9:\"ROLE_USER\";i:1;s:10:\"ROLE_ADMIN\";}',0,NULL,'','','',0,'','',0),(5,'super_test','super_test','super@test.com','super@test.com',1,'5thurwcpxa0wwo088kkowoo400kk40g','$2y$13$5thurwcpxa0wwo088kkoweXD6JVRhsW8NW3NsBUFB7RbGbZsTXccC',NULL,0,0,NULL,NULL,NULL,'a:2:{i:0;s:9:\"ROLE_USER\";i:1;s:16:\"ROLE_SUPER_ADMIN\";}',0,NULL,'','','',0,'','',0);
+INSERT INTO `fos_user` VALUES (1,'test','test','test@test.com','test@test.com',1,'humsm9zi5qo880wcw0cg40okwo40ocg','$2y$13$humsm9zi5qo880wcw0cg4uvnBCinioNTDXKLjzLWsoq06eoJ/c.fW','2016-03-31 12:29:38',0,0,NULL,NULL,NULL,'a:1:{i:0;s:9:\"ROLE_USER\";}',0,NULL,'Testas','Testinis','+37065214521',18,'a-','rh+',0),(4,'admin_test','admin_test','admin@test.com','admin@test.com',1,'6p6prfj1h1c0wggk4wsw0g04woggcos','$2y$13$6p6prfj1h1c0wggk4wsw0e3cQk03evCAu12ebCMCRUaou5Z8UF9BO',NULL,0,0,NULL,NULL,NULL,'a:2:{i:0;s:9:\"ROLE_USER\";i:1;s:10:\"ROLE_ADMIN\";}',0,NULL,'','','',0,'','',0),(5,'super_test','super_test','super@test.com','super@test.com',1,'5thurwcpxa0wwo088kkowoo400kk40g','$2y$13$5thurwcpxa0wwo088kkoweXD6JVRhsW8NW3NsBUFB7RbGbZsTXccC',NULL,0,0,NULL,NULL,NULL,'a:2:{i:0;s:9:\"ROLE_USER\";i:1;s:16:\"ROLE_SUPER_ADMIN\";}',0,NULL,'','','',0,'','',0),(11,'aiarasb','aiarasb','aiarasb@gmail.com','aiarasb@gmail.com',1,'lqph7lqesf4k4ccos84ggwooco8scg8','$2y$13$lqph7lqesf4k4ccos84ggu7Crd3mVuZgHAoaNKS.8HLF44zMNXy3a','2016-04-01 14:52:02',0,0,NULL,NULL,NULL,'a:1:{i:0;s:9:\"ROLE_USER\";}',0,NULL,'Aivaras','Baranauskas','+37069669040',20,'a-','rh+',3);
 /*!40000 ALTER TABLE `fos_user` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `towns`
+--
+
+DROP TABLE IF EXISTS `towns`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `towns` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `town` varchar(255) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `towns`
+--
+
+LOCK TABLES `towns` WRITE;
+/*!40000 ALTER TABLE `towns` DISABLE KEYS */;
+INSERT INTO `towns` VALUES (1,'Kaunas'),(2,'Vilnius'),(3,'Klaipėda'),(4,'Šiauliai'),(5,'Panevėžys');
+/*!40000 ALTER TABLE `towns` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -72,4 +96,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2016-03-30 16:16:13
+-- Dump completed on 2016-04-01 15:08:55

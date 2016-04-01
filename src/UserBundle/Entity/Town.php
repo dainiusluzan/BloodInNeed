@@ -2,6 +2,7 @@
 
 namespace UserBundle\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -25,10 +26,18 @@ class Town
      * @var string
      *
      * @ORM\Column(name="town", type="string", length=255)
-     * @ORM\OneToMany(targetEntity="User", mappedBy="towns")
      */
     private $town;
 
+    /**
+     * @ORM\OneToMany(targetEntity="User", mappedBy="town")
+     */
+    private $users;
+
+    public function __construct()
+    {
+        $this->users = new ArrayCollection();
+    }
 
     /**
      * Get id

@@ -31,8 +31,7 @@ class User extends BaseUser
     protected $lastName;
 
     /**
-     * @ORM\Column(type="integer")
-     * @ORM\ManyToOne(targetEntity="Town", inversedBy="fos_user")
+     * @ORM\ManyToOne(targetEntity="Town", inversedBy="users")
      * @ORM\JoinColumn(name="townId", referencedColumnName="id")
      */
     protected $town;
