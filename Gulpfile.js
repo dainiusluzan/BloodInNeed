@@ -6,6 +6,7 @@ var concat  = require('gulp-concat');
 var uglify  = require('gulp-uglify');
 var uglifycss  = require('gulp-uglifycss');
 var gulpif  = require('gulp-if');
+var watch = require('gulp-watch');
 
 var dir = {
     assets: './app/Resources/',
@@ -13,17 +14,6 @@ var dir = {
     bower: './bower_components/',
     bootstrapJS: './bower_components/bootstrap-sass/assets/javascripts/bootstrap/'
 };
-
-/*gulp.task('sass', function() {
-    gulp.src([
-        dir.assets + 'style/main.scss',
-        dir.bower +  'bootstrap/dist/css/bootstrap.css'
-        ])
-        .pipe(gulpif(/[.]scss/, sass({ outputStyle: 'compressed' }).on('error', sass.logError)))
-        .pipe(sass())
-        .pipe(concat('style.css'))
-        .pipe(gulp.dest(dir.dist + 'css'));
-});*/
 
 //CSS TASK: write one minified css file out of bootstrap.less and all of my custom less files
 gulp.task('sass', function () {
@@ -69,4 +59,16 @@ gulp.task('fonts', function() {
         .pipe(gulp.dest(dir.dist + 'fonts'));
 });
 
-gulp.task('default', ['sass', 'scripts', 'fonts', 'images']);
+// Watch
+gulp.task('watch', function() {
+    // Watch .scss files
+    gulp.watch(dir.assets + 'style/*.scss', ['sass']);
+    // Watch .js files
+    gulp.watch(dir.assets + 'scripts/*.js', ['scripts']);
+    // Watch image files
+    gulp.watch(dir.assets + 'images/**', ['images']);
+
+});
+
+// Default task
+gulp.task('default', ['watch', 'sass', 'scripts', 'fonts', 'images']);
