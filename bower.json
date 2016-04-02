@@ -7,17 +7,16 @@
   ],
   "license": "MIT",
   "homepage": "http://www.nfq.lt/apie-akademija/",
-  "moduleType": [
-    "globals"
-  ],
+  "moduleType": [],
   "private": true,
   "ignore": [
     "**/.*",
     "node_modules",
-    "bower_components"
+    "bower_components",
+    "test",
+    "tests"
   ],
   "dependencies": {
-    "bootstrap-sass": "~3.3.5",
-    "jquery": "~2.1.4"
+    "bootstrap": "^3.3.6"
   }
 }

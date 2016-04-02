@@ -6,8 +6,6 @@
 {% block stylesheets %}
    {# <link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet" type="text/css">#}
     {{ parent() }}
-    <link href="{{ asset('bundles/framework/css/scrolling-nav.css') }}" rel="stylesheet" type="text/css">
-
 {% endblock %}
 
 {% block body %}
@@ -92,6 +90,4 @@
 
 {% block javascripts %}
     {{  parent() }}
-    <script src="{{ asset('bundles/framework/js/scrolling-nav.js') }}"></script>
-
 {% endblock %}

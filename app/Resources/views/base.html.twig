@@ -6,9 +6,8 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
-    {#<link rel="icon" type="image/x-icon" href="{{ asset('images/favicon.ico')}}">#}
     {% block stylesheets %}
-        <link rel="stylesheet" href="{{ asset('bundles/framework/css/bootstrap.min.css') }}"/>
+        <link rel="stylesheet" href="{{ asset('css/styles.css') }}"/>
     {% endblock %}
     {% block canonical_meta %}{% endblock %}
 </head>
@@ -25,11 +24,7 @@
 {% include "::inc/footer.html.twig" %}
 {% endblock %}
 {% block javascripts %}
-    <script src="{{ asset('bundles/framework/js/jquery.js') }}"></script>
-
-    <script src="{{ asset('bundles/framework/js/bootstrap.min.js') }}"></script>
-
-    <script src="{{ asset('bundles/framework/js/jquery.easing.min.js') }}"></script>
+    <script src="{{ asset('js/script.js') }}"></script>
 {% endblock %}
 </body>
 </html>
