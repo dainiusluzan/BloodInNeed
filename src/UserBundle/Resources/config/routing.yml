@@ -1,6 +1,3 @@
-user_homepage:
-    path:     /
-    defaults: { _controller: UserBundle:Default:index }
 user_profile_show:
     path: /profile
     defaults: { _controller: UserBundle:Profile:show }
